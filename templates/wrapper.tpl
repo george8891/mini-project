@@ -32,16 +32,16 @@
                     bitter taste. Check the list below! Once traded, the beans are roasted to varying degrees,
                     depending on the desired flavor, before being ground and brewed to create coffee.
                 </p>
-                <h5 class="text-lowercase">Best coffeeshops in the world:</h3>
-                <a href="#">Truth Coffee, South Africa</a>
+                <h5 class="text-lowercase">useful links:</h3>
+                <a href="?p=products">products</a>
                 <hr class="dotted">
-                <a href="#">Coffee Academics, Hong Kong</a>
+                <a href="?p=categories">browse products by their category</a>
                 <hr class="dotted">
-                <a href="#">Barista Parlor, Nashville, Tennessee, USA</a>
+                <a href="?p=add_product">add product</a>
                 <hr class="dotted">
-                <a href="#">La Cafeotheque, Paris, France</a>
+                <a href="?p=add_category">add category</a>
                 <hr class="dotted">
-                <a href="#">Cafe Central, Austria, Vienna</a>
+                <a href="#todo">edit category</a>
                 <br><br>
             </div>
             <div class="col-sm-1"></div>
@@ -55,11 +55,11 @@
 
 			</div>
 		</div>
-		<div class="row fixed-bottom" id ="footer">
-			<div class="col-sm">
-				<h6>&copy Coffeelike | Design <a href="#">Coffeelike</a> by <a href="#">Georgi</a></h6>
-			</div>
-		</div>
+		<!-- <div class="row fixed-bottom" id ="footer"> -->
+			<!-- <div class="col-sm"> -->
+				<!-- <h6>&copy Coffeelike | Design <a href="#">Coffeelike</a> by <a href="#">Georgi</a></h6> -->
+			<!-- </div> -->
+		<!-- </div> -->
 	</div>
 </body>
 </html>

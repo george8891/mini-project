@@ -17,7 +17,7 @@
 			<label>Category</label>
 			<select class="form-control" name="category">
 				{{foreach from=$CATEGORIES item=$ITEM}}
-				<option name="{{$ITEM.category_id}}">{{$ITEM.category_name}}</option>
+				<option value="{{$ITEM.category_id}}">{{$ITEM.category_name}}</option>
 				{{/foreach}}
 			</select>
 			<label>Description</label>

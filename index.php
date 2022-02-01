@@ -18,8 +18,9 @@ switch($page){
 	case 'home':break;
 	case 'products':
 		
-		$query="select product_id,product_name,product_description,image,price,category_name from products p join categories c on p.category_id=c.category_id";
-		$result=mysqli_query($connect, $query);
+		$sql=$connect->prepare("select product_id,product_name,product_description,image,price,category_name from products p join categories c on p.category_id=c.category_id");
+		$sql->execute();
+		$result=$sql->get_result();
 		if($result-> num_rows>0){
 			$list = array();
 			while($row = $result-> fetch_assoc()){
@@ -120,18 +121,12 @@ switch($page){
 				$descr = filter_input(INPUT_POST, 'description');
 				$price = filter_input(INPUT_POST, 'price');
 				$price = number_format($price, 2, '.', '');
-				$category = filter_input(INPUT_POST, 'category');
+				$category_id = filter_input(INPUT_POST, 'category');
 				
 				if (empty($product)) $errors[] = "Product should have a name";
 				if (empty($descr)) $errors[] = "Product should have a description";
 				if (empty($price)) $errors[] = "Product should have a price";
-				//fetch category id
-				$sql2=$connect->prepare("select category_id from categories where category_name like '$category'");
 				
-				$sql2->execute();
-				$result=$sql2->get_result();
-				$row=$result->fetch_assoc();
-				$category_id=intval($row['category_id']);
 				if(count($errors) == 0) 
 				{
 					$sql = $connect->prepare("UPDATE products SET product_name=?, product_description=?, price=?, category_id=? where product_id='$id'");
@@ -147,6 +142,43 @@ switch($page){
 
 			}
 			
+		}
+	break;
+	case 'categories':
+		$errors=array();
+		$sql=$connect->prepare("select category_id, category_name from categories");
+		
+		if(!$sql->execute())
+		{
+			$errors[] = "Error loading categories";
+			$smarty->assign("ERROR", $errors[0]);
+		}
+		else{
+			$result=$sql->get_result();
+			$list = array();
+			while($row = $result-> fetch_assoc()){
+				$list[] = $row;
+			}
+			$smarty->assign('CATEGORIES', $list);
+		}
+		
+		if(isset($_POST['filter'])){
+			$id = filter_input(INPUT_POST, 'category');
+			$errors=array();
+			$sql=$connect->prepare("select * from products where category_id like '$id'");
+			$sql->execute();
+			$result=$sql->get_result();
+			if($result-> num_rows>0){
+				$list = array();
+				while($row = $result-> fetch_assoc()){
+					$list[] = $row;
+				}
+				$smarty->assign('LIST', $list);
+			}
+			
+			else{
+				echo 'Няма намерени продукти!!!';
+			}
 		}
 	break;
 }

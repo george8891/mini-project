@@ -56,14 +56,8 @@ if ($uploadOk == 0) {
 	$price = filter_input(INPUT_POST, 'price');
 	$price = number_format($price, 2, '.', '');
 	$descr = filter_input(INPUT_POST, 'description');
-	$category = filter_input(INPUT_POST, 'category');
+	$category_id = filter_input(INPUT_POST, 'category');
 	$file=basename($target_file);
-
-	//fetch category id
-	$sql2=$connect->prepare("select category_id from categories where category_name like '$category'");
-	
-	$sql2->execute();
-	$category_id=intval($sql2->get_result());
 	
 	if (empty($product)) $errors[] = "Product should have a name";
 	if (empty($descr)) $errors[] = "Product should have a description";
