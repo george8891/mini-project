@@ -1,0 +1,146 @@
+* { margin: 0; padding: 0; border: none; }
+body{
+   font-family: Arial, Helvetica, sans-serif;
+   color: #4a4a4a;
+   font-size: 12px;
+   background-color: #fff;
+}
+#logo{
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+
+.nav{ 
+    background-color: #333;
+}
+
+.nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+.nav li{
+    margin-left: 10px;
+    float:left;
+}
+.nav li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color:#FFF;
+    display: block;
+    background-color:#333;
+    padding: 12px;
+    font-size:14px;
+}
+.nav a:hover{
+    background-color: #ffa800;
+    text-decoration: none;
+}
+
+
+.bridge{
+    position: relative;
+}
+.bridge h1{
+    color:#fff;
+    font-size: 48px;
+    font-size:3.8vw;
+}
+.bridge h2{
+    font-size: 24px;
+    font-size:1.9vw;
+}
+#img{
+    width:100%;
+    height:auto;
+    display:block;
+    margin:0 auto;
+}
+#text-block{
+    position: absolute;
+    padding-left: 20px;
+    padding-right: 20px;
+    left:50px;
+    top:25%;
+    bottom:50%;
+    width:400px;
+    padding-left: 5%;
+    padding-right: auto;
+}
+
+.container{
+    height:auto;
+    display:block;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top:15px;
+}
+.container h3{
+    color: #6fbc18;
+    font-size: 24px;
+    font-weight: bold;
+}
+.container h6{
+    color:#3B4471;
+    font-style: italic;
+}
+.container a{
+    text-decoration: underline;
+    color:#6fbc18;
+}
+#maintxt{
+   padding-top: 15px; 
+   padding-bottom: 10px;
+   margin-left:-5%;
+   margin-right: 10.5%;
+}
+#pic{
+    /* margin-left:8.5%; */
+    margin-bottom:10px;
+    margin-top:25%;
+    width:100%;
+    height:auto;
+    display:block;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+
+.footer{
+    /* margin-left: 8.5%; */
+    /* margin-right: 8.5%; */
+    /* clear: both; */
+    /* width: 100%; */
+    /* position: absolute; */
+    /* left:0; */
+    /* bottom: 0; */
+    /* width: auto; */
+    /* padding: 5px; */
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+    background-color: #dfe0e2;
+    color:#535353;
+	text-align: center;
+}
+.footer h5{
+    font-size: 12px;
+    padding-top: 6px;
+}
+.footer a{
+    font-size: 12px;
+    color:#6fbc18;
+    text-decoration: underline;
+}
+.footer a:hover{
+    text-decoration: none;
+    color:#6fbc18;
+}
+
+#profilepic{
+	/* height:100px; */
+	/* width:100px; */
+	border-radius:25%;
+}

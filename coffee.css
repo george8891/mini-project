@@ -1,0 +1,106 @@
+body {
+    background: url("shadow.png") repeat-x, url("bg.jpg");
+    /* background-size: 16.5%; */
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    font-size: small;
+  }
+  p{
+      text-align: justify;
+  }
+  #nav{
+    margin-top: 35px;
+    margin-right:-80px;
+  }
+  #nav ul{
+      text-decoration: none;
+      text-transform: lowercase;
+      list-style-type: none;
+  }
+  #nav ul li{
+      display:inline-block;
+  }
+  #nav ul li a{
+    font-size: large;
+    text-align: center;
+    padding:14px 16px;
+    text-decoration: none;
+    color:white;
+  }
+  #nav ul li a:hover{
+    color:white;
+    text-decoration: none;
+    background-color: brown;
+}
+
+
+#sidemenu{
+    background-color: rgb(49, 19, 19);
+}
+#sidemenu h5, p, a{
+    color:white;
+    padding:10px;
+}
+#sidemenu h5{
+   font-weight: bold;
+}
+#sidemenu a{
+    color:white;
+    text-decoration: underline;
+}
+#sidemenu a:hover{
+    text-decoration: none;
+    color:brown;
+}
+#sidemenu hr{
+    border-color: white;
+}
+
+
+
+#maincontent{
+    background-color: white;
+}
+#maincontent img{
+    float: left;
+    margin-right:20px;
+}
+#maincontent h2{
+    font-weight: bold;
+}
+#cols h4{
+    font-weight: bold;
+}
+#useful{padding-left:10px}
+#maincontent p{
+    color:rgb(49, 19, 19);;
+}
+#maincontent a{
+    color:rgb(49, 19, 19);
+    text-decoration: underline;
+}
+#maincontent a:hover{
+    color:brown;
+    text-decoration-style: double;
+}
+#c2{
+    height:80px;
+    width:80px;
+    margin-top:20px;
+    margin-bottom: 10px;;
+}
+
+
+
+#footer{
+    text-align: center;
+    padding:5px;
+	background-color:#aaa;
+}
+#footer a{
+    text-decoration: none;
+    color:rgb(49, 19, 19);
+}
+#footer a:hover{
+    color:brown;
+    text-decoration: underline;
+}
